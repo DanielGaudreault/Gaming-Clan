@@ -1,1 +1,570 @@
+/* Cyber Theme Specific Styles */
 
+/* Clan Cards */
+.clans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.clan-card {
+    background: rgba(26, 26, 46, 0.7);
+    border: 2px solid var(--cyber-gray);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.clan-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--cyber-primary), transparent);
+    transition: left 0.5s;
+}
+
+.clan-card:hover::before {
+    left: 100%;
+}
+
+.clan-card:hover {
+    border-color: var(--cyber-primary);
+    box-shadow: 0 0 20px var(--cyber-glow);
+    transform: translateY(-5px);
+}
+
+.clan-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.clan-name {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: var(--cyber-primary);
+    font-size: 1.2rem;
+}
+
+.clan-tag {
+    background: var(--cyber-secondary);
+    color: var(--cyber-dark);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.clan-info {
+    margin-bottom: 15px;
+}
+
+.clan-game {
+    color: var(--cyber-light);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.clan-platforms {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.platform-tag {
+    background: var(--cyber-gray);
+    color: var(--cyber-light);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+}
+
+.clan-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.clan-stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: var(--cyber-primary);
+    font-size: 1.1rem;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: var(--cyber-secondary);
+    text-transform: uppercase;
+}
+
+.clan-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Tournament Cards */
+.tournaments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tournament-card {
+    background: rgba(26, 26, 46, 0.7);
+    border: 2px solid var(--cyber-gray);
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tournament-card.featured {
+    border-color: var(--cyber-accent);
+    box-shadow: 0 0 30px var(--cyber-glow-accent);
+}
+
+.tournament-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--cyber-accent);
+    color: var(--cyber-dark);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tournament-header {
+    margin-bottom: 20px;
+}
+
+.tournament-header h3 {
+    font-family: 'Orbitron', monospace;
+    color: var(--cyber-primary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.tournament-prize {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cyber-accent);
+    font-weight: 600;
+}
+
+.tournament-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cyber-light);
+}
+
+.detail-item i {
+    color: var(--cyber-secondary);
+    width: 20px;
+}
+
+.tournament-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Recruitment Cards */
+.recruitment-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.recruit-card {
+    background: rgba(26, 26, 46, 0.7);
+    border: 2px solid var(--cyber-gray);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.recruit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--cyber-primary), transparent);
+    transition: left 0.5s;
+}
+
+.recruit-card:hover::before {
+    left: 100%;
+}
+
+.recruit-card:hover {
+    border-color: var(--cyber-primary);
+    box-shadow: 0 0 20px var(--cyber-glow);
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--cyber-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    color: var(--cyber-dark);
+}
+
+.recruit-card h3 {
+    font-family: 'Orbitron', monospace;
+    color: var(--cyber-primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.recruit-card p {
+    color: var(--cyber-light);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Quick Apply Form */
+.quick-apply {
+    background: rgba(26, 26, 46, 0.7);
+    border: 2px solid var(--cyber-gray);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.quick-apply h3 {
+    font-family: 'Orbitron', monospace;
+    color: var(--cyber-primary);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Stats Dashboard */
+.stats-dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.stat-widget {
+    background: rgba(26, 26, 46, 0.7);
+    border: 2px solid var(--cyber-gray);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.stat-widget.large {
+    grid-column: 1 / -1;
+}
+
+.stat-widget h3 {
+    font-family: 'Orbitron', monospace;
+    color: var(--cyber-primary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.chart-container {
+    height: 200px;
+    position: relative;
+}
+
+.heatmap {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    height: 150px;
+}
+
+.heatmap-cell {
+    background: var(--cyber-gray);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.heatmap-cell:hover {
+    transform: scale(1.1);
+}
+
+.leaderboards {
+    background: rgba(26, 26, 46, 0.7);
+    border: 2px solid var(--cyber-gray);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.leaderboards h3 {
+    font-family: 'Orbitron', monospace;
+    color: var(--cyber-primary);
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(10, 10, 18, 0.5);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.leaderboard-item:hover {
+    background: rgba(0, 255, 136, 0.1);
+    border-left: 3px solid var(--cyber-primary);
+}
+
+.leaderboard-rank {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: var(--cyber-primary);
+    width: 30px;
+}
+
+.leaderboard-name {
+    flex: 1;
+    color: var(--cyber-light);
+    font-weight: 600;
+}
+
+.leaderboard-score {
+    font-family: 'Orbitron', monospace;
+    color: var(--cyber-secondary);
+    font-weight: 700;
+}
+
+/* Checkbox Styles */
+.cyber-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--cyber-light);
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.cyber-checkbox:hover {
+    color: var(--cyber-primary);
+}
+
+.cyber-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--cyber-gray);
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.cyber-checkbox input:checked + .checkmark {
+    background: var(--cyber-primary);
+    border-color: var(--cyber-primary);
+}
+
+.cyber-checkbox input:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cyber-dark);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Filter Groups */
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.filter-group h3 {
+    font-family: 'Orbitron', monospace;
+    color: var(--cyber-primary);
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.platform-filters,
+.game-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Clans Container */
+.clans-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+.clans-sidebar {
+    background: rgba(26, 26, 46, 0.7);
+    border: 2px solid var(--cyber-gray);
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header p {
+    color: var(--cyber-light);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.recruitment-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recruitment-hero p {
+    color: var(--cyber-light);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Auth Forms */
+.auth-forms {
+    position: relative;
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cyber-gray);
+}
+
+.auth-switch span {
+    color: var(--cyber-light);
+    margin-right: 10px;
+}
+
+.auth-switch a {
+    color: var(--cyber-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-switch a:hover {
+    color: var(--cyber-secondary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .clans-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .clans-sidebar {
+        position: static;
+    }
+    
+    .stats-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tournaments-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .recruitment-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .clan-actions {
+        flex-direction: column;
+    }
+    
+    .tournament-actions {
+        flex-direction: column;
+    }
+}
