@@ -91,4 +91,46 @@
     {
       "id": 5,
       "name": "Mobile Masters Showdown",
-      "game":
+      "game": "Call of Duty Mobile",
+      "platforms": ["mobile"],
+      "prize": "$300",
+      "teams": 24,
+      "registeredTeams": 18,
+      "startDate": "2024-12-19T17:00:00Z",
+      "endDate": "2024-12-19T19:00:00Z",
+      "status": "registration",
+      "featured": false,
+      "organizer": "Cyber Legion",
+      "format": "Single Elimination",
+      "rules": {
+        "teamSize": 4,
+        "gameMode": "Hardpoint + Search & Destroy",
+        "controls": "Touch only",
+        "devices": "Phones and tablets allowed"
+      },
+      "description": "Mobile gaming tournament showcasing the best COD Mobile players and teams."
+    },
+    {
+      "id": 6,
+      "name": "League of Legends Clash",
+      "game": "League of Legends",
+      "platforms": ["pc"],
+      "prize": "$600",
+      "teams": 16,
+      "registeredTeams": 14,
+      "startDate": "2024-12-21T20:00:00Z",
+      "endDate": "2024-12-21T23:00:00Z",
+      "status": "registration",
+      "featured": false,
+      "organizer": "Cyber Legion",
+      "format": "Best of 3",
+      "rules": {
+        "teamSize": 5,
+        "draft": "Tournament draft",
+        "servers": "North America",
+        "champions": "All available"
+      },
+      "description": "League of Legends team competition following standard competitive rules and format."
+    }
+  ]
+}
