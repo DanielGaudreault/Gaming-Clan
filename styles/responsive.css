@@ -1,0 +1,379 @@
+/* Responsive Design Styles */
+
+/* Large Desktops */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .cyber-hero {
+        gap: 80px;
+    }
+    
+    .cyber-title {
+        font-size: 4rem;
+    }
+}
+
+/* Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    .cyber-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .clans-container {
+        grid-template-columns: 200px 1fr;
+    }
+    
+    .stats-dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content.large {
+        max-width: 90%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .cyber-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .logo {
+        justify-content: center;
+    }
+    
+    .cyber-nav .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .user-section {
+        justify-content: center;
+    }
+    
+    .cyber-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .stat-card {
+        min-width: 120px;
+    }
+    
+    .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .clans-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .clans-sidebar {
+        position: static;
+        margin-bottom: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .recruitment-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tournament-actions,
+    .clan-actions {
+        flex-direction: column;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .profile-stats {
+        justify-content: center;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .cyber-header {
+        padding: 15px 0;
+    }
+    
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .cyber-glitch {
+        font-size: 1.5rem;
+    }
+    
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .nav-link span {
+        display: none;
+    }
+    
+    .cyber-btn {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .cyber-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .cyber-subtitle {
+        font-size: 1rem;
+    }
+    
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .tournament-card,
+    .clan-card {
+        padding: 15px;
+    }
+    
+    .clan-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stat-widget {
+        padding: 15px;
+    }
+    
+    .heatmap {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 2px;
+    }
+    
+    .leaderboard-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link:hover {
+        border-color: transparent;
+        box-shadow: none;
+    }
+    
+    .nav-link.active {
+        border-color: var(--cyber-primary);
+        box-shadow: 0 0 10px var(--cyber-glow);
+    }
+    
+    .cyber-btn:hover {
+        background: transparent;
+        color: var(--cyber-primary);
+        box-shadow: none;
+        transform: none;
+    }
+    
+    .cyber-btn:active {
+        background: var(--cyber-primary);
+        color: var(--cyber-dark);
+        transform: scale(0.98);
+    }
+    
+    .platform-card:hover,
+    .game-card:hover,
+    .clan-card:hover {
+        transform: none;
+        border-color: var(--cyber-gray);
+        box-shadow: none;
+    }
+    
+    .platform-card:active,
+    .game-card:active,
+    .clan-card:active {
+        border-color: var(--cyber-primary);
+        box-shadow: 0 0 10px var(--cyber-glow);
+        transform: scale(0.98);
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .cyber-grid {
+        background-size: 25px 25px;
+    }
+    
+    .cyber-lines {
+        background-size: 50px 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .cyber-header,
+    .cyber-nav,
+    .cyber-btn,
+    .user-section {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .cyber-grid,
+    .cyber-lines,
+    .floating-particles {
+        display: none !important;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .content-section {
+        display: block !important;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .cyber-grid,
+    .cyber-lines,
+    .floating-particles {
+        animation: none !important;
+    }
+    
+    .cyber-glitch::before,
+    .cyber-glitch::after {
+        animation: none !important;
+        display: none !important;
+    }
+    
+    .glitch-text::before,
+    .glitch-text::after {
+        animation: none !important;
+        display: none !important;
+    }
+}
+
+/* Dark Mode Support (for systems that prefer dark mode) */
+@media (prefers-color-scheme: dark) {
+    /* The cyber theme is already dark, but we can adjust if needed */
+}
+
+/* Light Mode Override (if someone forces light mode) */
+@media (prefers-color-scheme: light) {
+    body {
+        background: #f0f0f0;
+        color: #333;
+    }
+    
+    .cyber-grid {
+        background-image: 
+            linear-gradient(rgba(0, 100, 0, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 100, 0, 0.1) 1px, transparent 1px);
+    }
+}
+
+/* Orientation-specific styles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .cyber-hero {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+    
+    .hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .cyber-btn {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+    }
+    
+    .nav-link {
+        padding: 6px 8px;
+    }
+    
+    .cyber-title {
+        font-size: 1.8rem;
+    }
+}
