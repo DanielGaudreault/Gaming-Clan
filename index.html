@@ -1,1 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER LEGION - Gaming Clan Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/cyber-theme.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cyber Background Elements -->
+    <div class="cyber-grid"></div>
+    <div class="cyber-lines"></div>
+    <div class="floating-particles"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="cyber-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="cyber-glitch" data-text="CYBER LEGION">CYBER LEGION</span>
+                    <span class="logo-subtitle">MULTI-PLATFORM GAMING CLAN</span>
+                </div>
+            </div>
+            
+            <nav class="cyber-nav">
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <i class="fas fa-home"></i>
+                        <span>HQ</span>
+                    </a>
+                    <a href="#clans" class="nav-link" data-section="clans">
+                        <i class="fas fa-users"></i>
+                        <span>CLANS</span>
+                    </a>
+                    <a href="#tournaments" class="nav-link" data-section="tournaments">
+                        <i class="fas fa-trophy"></i>
+                        <span>TOURNAMENTS</span>
+                    </a>
+                    <a href="#recruitment" class="nav-link" data-section="recruitment">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>RECRUITMENT</span>
+                    </a>
+                    <a href="#stats" class="nav-link" data-section="stats">
+                        <i class="fas fa-chart-line"></i>
+                        <span>STATS</span>
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="user-section">
+                <div class="auth-buttons" id="authButtons">
+                    <button class="cyber-btn cyber-btn-primary" onclick="showAuthModal('login')">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>LOGIN</span>
+                    </button>
+                    <button class="cyber-btn" onclick="showAuthModal('register')">
+                        <i class="fas fa-user-plus"></i>
+                        <span>REGISTER</span>
+                    </button>
+                </div>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <div class="user-avatar">
+                        <img id="userAvatar" src="" alt="Avatar">
+                        <div class="online-status"></div>
+                    </div>
+                    <div class="user-info">
+                        <span class="username" id="username">Player</span>
+                        <span class="user-rank" id="userRank">Recruit</span>
+                    </div>
+                    <button class="cyber-btn cyber-btn-secondary" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
 
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="content-section active">
+                <div class="cyber-hero">
+                    <div class="hero-content">
+                        <h1 class="cyber-title glitch-text" data-text="JOIN THE LEGION">JOIN THE LEGION</h1>
+                        <p class="cyber-subtitle">Multi-Platform Gaming Clan • Competitive • Community • Cyberpunk</p>
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <div class="stat-number" id="totalMembers">2,847</div>
+                                <div class="stat-label">ACTIVE MEMBERS</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="onlineNow">1,234</div>
+                                <div class="stat-label">ONLINE NOW</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="tournamentsWon">156</div>
+                                <div class="stat-label">TOURNAMENTS WON</div>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="cyber-btn cyber-btn-large cyber-btn-primary" onclick="switchSection('recruitment')">
+                                <i class="fas fa-bullhorn"></i>
+                                JOIN NOW
+                            </button>
+                            <button class="cyber-btn cyber-btn-large cyber-btn-secondary" onclick="switchSection('clans')">
+                                <i class="fas fa-users"></i>
+                                EXPLORE CLANS
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="platform-grid">
+                            <div class="platform-card" data-platform="pc">
+                                <i class="fab fa-windows"></i>
+                                <span>PC</span>
+                            </div>
+                            <div class="platform-card" data-platform="playstation">
+                                <i class="fab fa-playstation"></i>
+                                <span>PS5</span>
+                            </div>
+                            <div class="platform-card" data-platform="xbox">
+                                <i class="fab fa-xbox"></i>
+                                <span>XBOX</span>
+                            </div>
+                            <div class="platform-card" data-platform="nintendo">
+                                <i class="fas fa-gamepad"></i>
+                                <span>SWITCH</span>
+                            </div>
+                            <div class="platform-card" data-platform="mobile">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>MOBILE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Games -->
+                <div class="featured-games">
+                    <h2 class="section-title">FEATURED GAMES</h2>
+                    <div class="games-grid">
+                        <div class="game-card" data-game="valorant">
+                            <div class="game-icon">
+                                <i class="fas fa-crosshairs"></i>
+                            </div>
+                            <div class="game-info">
+                                <h3>VALORANT</h3>
+                                <p>Tactical Shooter</p>
+                                <div class="game-stats">
+                                    <span>324 Active</span>
+                                    <span>12 Clans</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card" data-game="cod">
+                            <div class="game-icon">
+                                <i class="fas fa-gun"></i>
+                            </div>
+                            <div class="game-info">
+                                <h3>CALL OF DUTY</h3>
+                                <p>FPS</p>
+                                <div class="game-stats">
+                                    <span>587 Active</span>
+                                    <span>18 Clans</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card" data-game="apex">
+                            <div class="game-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div class="game-info">
+                                <h3>APEX LEGENDS</h3>
+                                <p>Battle Royale</p>
+                                <div class="game-stats">
+                                    <span>421 Active</span>
+                                    <span>15 Clans</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card" data-game="lol">
+                            <div class="game-icon">
+                                <i class="fas fa-dragon"></i>
+                            </div>
+                            <div class="game-info">
+                                <h3>LEAGUE OF LEGENDS</h3>
+                                <p>MOBA</p>
+                                <div class="game-stats">
+                                    <span>289 Active</span>
+                                    <span>9 Clans</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Clans Section -->
+            <section id="clans" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">CLAN BATTALIONS</h2>
+                    <p>Join specialized clans for your favorite games and platforms</p>
+                </div>
+                
+                <div class="clans-container">
+                    <div class="clans-sidebar">
+                        <div class="filter-group">
+                            <h3>FILTER BY PLATFORM</h3>
+                            <div class="platform-filters">
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="platform" value="pc" checked>
+                                    <span class="checkmark"></span>
+                                    PC
+                                </label>
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="platform" value="playstation" checked>
+                                    <span class="checkmark"></span>
+                                    PlayStation
+                                </label>
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="platform" value="xbox" checked>
+                                    <span class="checkmark"></span>
+                                    Xbox
+                                </label>
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="platform" value="nintendo" checked>
+                                    <span class="checkmark"></span>
+                                    Nintendo
+                                </label>
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="platform" value="mobile" checked>
+                                    <span class="checkmark"></span>
+                                    Mobile
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h3>FILTER BY GAME</h3>
+                            <div class="game-filters">
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="game" value="valorant" checked>
+                                    <span class="checkmark"></span>
+                                    Valorant
+                                </label>
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="game" value="cod" checked>
+                                    <span class="checkmark"></span>
+                                    Call of Duty
+                                </label>
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="game" value="apex" checked>
+                                    <span class="checkmark"></span>
+                                    Apex Legends
+                                </label>
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="game" value="lol" checked>
+                                    <span class="checkmark"></span>
+                                    League of Legends
+                                </label>
+                                <label class="cyber-checkbox">
+                                    <input type="checkbox" name="game" value="overwatch" checked>
+                                    <span class="checkmark"></span>
+                                    Overwatch 2
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="clans-grid" id="clansGrid">
+                        <!-- Clans will be dynamically loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tournaments Section -->
+            <section id="tournaments" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">CYBER TOURNAMENTS</h2>
+                    <p>Compete for glory and rewards in our organized tournaments</p>
+                </div>
+                
+                <div class="tournaments-container">
+                    <div class="tournament-card featured">
+                        <div class="tournament-badge">FEATURED</div>
+                        <div class="tournament-header">
+                            <h3>CYBER LEGION CHAMPIONSHIP</h3>
+                            <div class="tournament-prize">
+                                <i class="fas fa-trophy"></i>
+                                $10,000 PRIZE POOL
+                            </div>
+                        </div>
+                        <div class="tournament-details">
+                            <div class="detail-item">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Cross-Platform</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Starts: Dec 15, 2024</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>128 Teams</span>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="cyber-btn cyber-btn-primary">REGISTER NOW</button>
+                            <button class="cyber-btn cyber-btn-secondary">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tournaments-grid" id="tournamentsGrid">
+                        <!-- Tournaments will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recruitment Section -->
+            <section id="recruitment" class="content-section">
+                <div class="recruitment-hero">
+                    <h2 class="section-title">ENLIST IN CYBER LEGION</h2>
+                    <p>Find your squad and dominate the competition across all platforms</p>
+                </div>
+                
+                <div class="recruitment-options">
+                    <div class="recruit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>FIND A CLAN</h3>
+                        <p>Browse active clans looking for members</p>
+                        <button class="cyber-btn cyber-btn-primary" onclick="showClanBrowser()">
+                            BROWSE CLANS
+                        </button>
+                    </div>
+                    
+                    <div class="recruit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h3>CREATE CLAN</h3>
+                        <p>Start your own clan and build your legacy</p>
+                        <button class="cyber-btn cyber-btn-secondary" onclick="showCreateClanModal()">
+                            CREATE CLAN
+                        </button>
+                    </div>
+                    
+                    <div class="recruit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3>FIND PLAYERS</h3>
+                        <p>Connect with players for your squad</p>
+                        <button class="cyber-btn cyber-btn-primary" onclick="showPlayerFinder()">
+                            FIND PLAYERS
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="quick-apply">
+                    <h3>QUICK APPLICATION</h3>
+                    <form class="cyber-form" id="quickApplyForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="applyGame">MAIN GAME</label>
+                                <select id="applyGame" required>
+                                    <option value="">Select Game</option>
+                                    <option value="valorant">Valorant</option>
+                                    <option value="cod">Call of Duty</option>
+                                    <option value="apex">Apex Legends</option>
+                                    <option value="lol">League of Legends</option>
+                                    <option value="overwatch">Overwatch 2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="applyPlatform">PLATFORM</label>
+                                <select id="applyPlatform" required>
+                                    <option value="">Select Platform</option>
+                                    <option value="pc">PC</option>
+                                    <option value="playstation">PlayStation</option>
+                                    <option value="xbox">Xbox</option>
+                                    <option value="nintendo">Nintendo Switch</option>
+                                    <option value="mobile">Mobile</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="applyRank">COMPETITIVE RANK</label>
+                                <select id="applyRank" required>
+                                    <option value="">Select Rank</option>
+                                    <option value="beginner">Beginner</option>
+                                    <option value="casual">Casual</option>
+                                    <option value="experienced">Experienced</option>
+                                    <option value="competitive">Competitive</option>
+                                    <option value="pro">Professional</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="applyMessage">MESSAGE TO CLANS (Optional)</label>
+                            <textarea id="applyMessage" placeholder="Tell clans about your gaming style and what you're looking for..."></textarea>
+                        </div>
+                        <button type="submit" class="cyber-btn cyber-btn-large cyber-btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            SUBMIT APPLICATION
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section id="stats" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">LEGION STATISTICS</h2>
+                    <p>Real-time data and analytics from Cyber Legion</p>
+                </div>
+                
+                <div class="stats-dashboard">
+                    <div class="stats-grid">
+                        <div class="stat-widget large">
+                            <h3>ACTIVITY HEATMAP</h3>
+                            <div class="heatmap" id="activityHeatmap">
+                                <!-- Heatmap will be generated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="stat-widget">
+                            <h3>PLATFORM DISTRIBUTION</h3>
+                            <div class="chart-container">
+                                <canvas id="platformChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-widget">
+                            <h3>GAME POPULARITY</h3>
+                            <div class="chart-container">
+                                <canvas id="gameChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-widget">
+                            <h3>CLAN GROWTH</h3>
+                            <div class="chart-container">
+                                <canvas id="growthChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="leaderboards">
+                        <h3>TOP CLANS</h3>
+                        <div class="leaderboard-list" id="topClansList">
+                            <!-- Leaderboard will be populated -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="cyber-modal" id="authModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="authModalTitle">ACCESS TERMINAL</h2>
+                <button class="modal-close" onclick="closeModal('authModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="auth-forms">
+                <div class="auth-form active" id="loginForm">
+                    <form class="cyber-form" onsubmit="login(event)">
+                        <div class="form-group">
+                            <label for="loginUsername">USERNAME</label>
+                            <input type="text" id="loginUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">PASSWORD</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="cyber-btn cyber-btn-primary cyber-btn-block">
+                            <i class="fas fa-terminal"></i>
+                            LOGIN
+                        </button>
+                    </form>
+                    <div class="auth-switch">
+                        <span>New to Cyber Legion?</span>
+                        <a href="#" onclick="showRegisterForm()">Create Account</a>
+                    </div>
+                </div>
+                
+                <div class="auth-form" id="registerForm">
+                    <form class="cyber-form" onsubmit="register(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="registerUsername">USERNAME</label>
+                                <input type="text" id="registerUsername" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registerEmail">EMAIL</label>
+                                <input type="email" id="registerEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="registerPassword">PASSWORD</label>
+                                <input type="password" id="registerPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registerConfirm">CONFIRM PASSWORD</label>
+                                <input type="password" id="registerConfirm" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPlatform">MAIN PLATFORM</label>
+                            <select id="registerPlatform" required>
+                                <option value="">Select Platform</option>
+                                <option value="pc">PC</option>
+                                <option value="playstation">PlayStation</option>
+                                <option value="xbox">Xbox</option>
+                                <option value="nintendo">Nintendo Switch</option>
+                                <option value="mobile">Mobile</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="cyber-btn cyber-btn-primary cyber-btn-block">
+                            <i class="fas fa-user-plus"></i>
+                            CREATE ACCOUNT
+                        </button>
+                    </form>
+                    <div class="auth-switch">
+                        <span>Already have an account?</span>
+                        <a href="#" onclick="showLoginForm()">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification System -->
+    <div class="cyber-notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-info-circle"></i>
+            <span id="notificationMessage">Welcome to Cyber Legion!</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/clan-manager.js"></script>
+</body>
+</html>
