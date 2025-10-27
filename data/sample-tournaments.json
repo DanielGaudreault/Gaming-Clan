@@ -1,0 +1,94 @@
+{
+  "tournaments": [
+    {
+      "id": 1,
+      "name": "Cyber Legion Championship",
+      "game": "Cross-Platform",
+      "platforms": ["pc", "playstation", "xbox", "nintendo", "mobile"],
+      "prize": "$10,000",
+      "teams": 128,
+      "registeredTeams": 89,
+      "startDate": "2024-12-15T18:00:00Z",
+      "endDate": "2024-12-17T22:00:00Z",
+      "status": "registration",
+      "featured": true,
+      "organizer": "Cyber Legion",
+      "format": "Double Elimination",
+      "rules": {
+        "teamSize": 5,
+        "platform": "Cross-Platform",
+        "checkIn": "30 minutes before start",
+        "stream": "Required for top 8"
+      },
+      "description": "The ultimate cross-platform championship featuring the best teams from Cyber Legion. Compete across multiple games and platforms for glory and cash prizes."
+    },
+    {
+      "id": 2,
+      "name": "Weekly Valorant Showdown",
+      "game": "Valorant",
+      "platforms": ["pc"],
+      "prize": "$500",
+      "teams": 16,
+      "registeredTeams": 12,
+      "startDate": "2024-12-20T20:00:00Z",
+      "endDate": "2024-12-20T23:00:00Z",
+      "status": "registration",
+      "featured": false,
+      "organizer": "Cyber Legion",
+      "format": "Single Elimination",
+      "rules": {
+        "teamSize": 5,
+        "mapPool": "All current competitive maps",
+        "agents": "All agents allowed",
+        "server": "North Virginia"
+      },
+      "description": "Weekly Valorant competition for teams looking to test their skills and climb the ranks."
+    },
+    {
+      "id": 3,
+      "name": "Cross-Platform COD War",
+      "game": "Call of Duty",
+      "platforms": ["pc", "playstation", "xbox"],
+      "prize": "$1,000",
+      "teams": 32,
+      "registeredTeams": 28,
+      "startDate": "2024-12-22T19:00:00Z",
+      "endDate": "2024-12-22T22:00:00Z",
+      "status": "registration",
+      "featured": false,
+      "organizer": "Cyber Legion",
+      "format": "Swiss System",
+      "rules": {
+        "teamSize": 4,
+        "gameMode": "Search & Destroy",
+        "maps": "Standard competitive rotation",
+        "crossplay": "Enabled"
+      },
+      "description": "Call of Duty cross-platform tournament featuring the latest competitive modes and maps."
+    },
+    {
+      "id": 4,
+      "name": "Apex Legends Trios Cup",
+      "game": "Apex Legends",
+      "platforms": ["pc", "playstation"],
+      "prize": "$750",
+      "teams": 48,
+      "registeredTeams": 42,
+      "startDate": "2024-12-18T21:00:00Z",
+      "endDate": "2024-12-18T23:30:00Z",
+      "status": "ongoing",
+      "featured": false,
+      "organizer": "Cyber Legion",
+      "format": "Points System",
+      "rules": {
+        "teamSize": 3,
+        "matches": 6,
+        "scoring": "Kills + Placement",
+        "map": "World's Edge"
+      },
+      "description": "Apex Legends trios tournament with custom scoring system. Prove your team is the best in the arena."
+    },
+    {
+      "id": 5,
+      "name": "Mobile Masters Showdown",
+      "game":
